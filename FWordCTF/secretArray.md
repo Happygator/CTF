@@ -15,11 +15,11 @@ START:
 ```  
 As the problem says, we can get the sums of two different numbers in the array and we habve 1337 guesses to get all 1337 numbers from the array.  
 If we query 0 1, 1 2, and 0 2 then we can find out all three of the numbers:  
-(arr[0] + arr[1]) + (arr[1] + arr[2]) + (arr[0] + arr[2])
+(arr[0] + arr[1]) + (arr[1] + arr[2]) + (arr[0] + arr[2])  
 = 2 * (arr[0]) + arr[1] + arr[2])  
-Divide by two to get the sum of all three and then subtract each pair sum to get arr[0], arr[1], arr[2].
-Next, we can query 0 3, 0 4, and so on up to 0 1336 because we know arr[0].
-Program:
+Divide by two to get the sum of all three and then subtract each pair sum to get arr[0], arr[1], arr[2].  
+Next, we can query 0 3, 0 4, and so on up to 0 1336 because we know arr[0].  
+Program:  
 ```
 from pwn import *
 
