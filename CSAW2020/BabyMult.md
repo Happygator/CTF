@@ -2,7 +2,7 @@
 Welcome to reversing! Prove your worth and get the flag from this neat little program!
 ```
   
-The file given is a bunch of numbers. Translate the numbers into binary and then into assembly code using cyberchef. This yields:  
+The file given is a bunch of numbers. Translate the numbers into binary and then into assembly code using [cyberchef](https://gchq.github.io/CyberChef/#recipe=From_Decimal(%27Comma%27,false)To_Hex(%27Space%27,0)Disassemble_x86(%2764%27,%27Full%20x86%20architecture%27,16,0,true,true)&input=ODUsNzIsMTM3LDIyOSw3MiwxMzEsMjM2LDI0LDcyLDE5OSw2OSwyNDgsNzksMCwwLDAsNzIsMTg0LDIxLDc5LDIzMSw3NSwxLDAsMCwwLDcyLDEzNyw2OSwyNDAsNzIsMTk5LDY5LDIzMiw0LDAsMCwwLDcyLDE5OSw2OSwyMjQsMywwLDAsMCw3MiwxOTksNjksMjE2LDE5LDAsMCwwLDcyLDE5OSw2OSwyMDgsMjEsMSwwLDAsNzIsMTg0LDk3LDkxLDEwMCw3NSwyMDcsMTE5LDAsMCw3MiwxMzcsNjksMjAwLDcyLDE5OSw2OSwxOTIsMiwwLDAsMCw3MiwxOTksNjksMTg0LDE3LDAsMCwwLDcyLDE5OSw2OSwxNzYsMTkzLDMzLDAsMCw3MiwxOTksNjksMTY4LDIzMywxMDEsMzQsMjQsNzIsMTk5LDY5LDE2MCw1MSw4LDAsMCw3MiwxOTksNjksMTUyLDE3MSwxMCwwLDAsNzIsMTk5LDY5LDE0NCwxNzMsMTcwLDE0MSwwLDcyLDEzOSw2OSwyNDgsNzIsMTUsMTc1LDY5LDI0MCw3MiwxMzcsNjksMTM2LDcyLDEzOSw2OSwyMzIsNzIsMTUsMTc1LDY5LDIyNCw3MiwxNSwxNzUsNjksMjE2LDcyLDE1LDE3NSw2OSwyMDgsNzIsMTUsMTc1LDY5LDIwMCw3MiwxMzcsNjksMTI4LDcyLDEzOSw2OSwxOTIsNzIsMTUsMTc1LDY5LDE4NCw3MiwxNSwxNzUsNjksMTc2LDcyLDE1LDE3NSw2OSwxNjgsNzIsMTM3LDEzMywxMjAsMjU1LDI1NSwyNTUsNzIsMTM5LDY5LDE2MCw3MiwxNSwxNzUsNjksMTUyLDcyLDE1LDE3NSw2OSwxNDQsNzIsMTM3LDEzMywxMTIsMjU1LDI1NSwyNTUsMTg0LDAsMCwwLDAsMjAxCg). This yields:  
 ```
 00 55                              PUSH RBP
 01 4889E5                          MOV RBP,RSP
