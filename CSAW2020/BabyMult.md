@@ -83,7 +83,7 @@ D5 48898570FFFFFF                  MOV QWORD PTR [RBP-90],RAX          ;var90 = 
 DC B800000000                      MOV EAX,00000000
 E1 C9                              LEAVE
 ```  
-If we take the values of var90, var88, var80, and var78 and [convert them into ASCII](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')&input=MHg2NjZjNjE2NzdiCjB4NzM3NTcwMzM3MjVmNzYzNAoweDZjMzE2NDVmNzA3MgoweDMwNjc3MjM0NmQ3ZCc), we get the flag.
+If we take the values of all four variables and [convert them into ASCII](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')&input=MHg2NjZjNjE2NzdiCjB4NzM3NTcwMzM3MjVmNzYzNAoweDZjMzE2NDVmNzA3MgoweDMwNjc3MjM0NmQ3ZCc), we get the flag.
 ```
 var78 = 0x666c61677b
 var80 = 0x73757033725f7634
