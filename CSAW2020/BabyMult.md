@@ -1,0 +1,48 @@
+```
+Welcome to reversing! Prove your worth and get the flag from this neat little program!
+```
+  
+The file given is a bunch of numbers. Translate the numbers into binary and then into assembly code using cyberchef. This yields:  
+```
+00 55                              PUSH RBP
+01 4889E5                          MOV RBP,RSP
+04 4883EC18                        SUB RSP,18
+08 48C745F84F000000                MOV QWORD PTR [RBP-08],0000004F
+10 48B8154FE74B01000000            MOV RAX,000000014BE74F15
+1A 488945F0                        MOV QWORD PTR [RBP-10],RAX
+1E 48C745E804000000                MOV QWORD PTR [RBP-18],00000004
+26 48C745E003000000                MOV QWORD PTR [RBP-20],00000003
+2E 48C745D813000000                MOV QWORD PTR [RBP-28],00000013
+36 48C745D015010000                MOV QWORD PTR [RBP-30],00000115
+3E 48B8615B644BCF770000            MOV RAX,000077CF4B645B61
+48 488945C8                        MOV QWORD PTR [RBP-38],RAX
+4C 48C745C002000000                MOV QWORD PTR [RBP-40],00000002
+54 48C745B811000000                MOV QWORD PTR [RBP-48],00000011
+5C 48C745B0C1210000                MOV QWORD PTR [RBP-50],000021C1
+64 48C745A8E9652218                MOV QWORD PTR [RBP-58],182265E9
+6C 48C745A033080000                MOV QWORD PTR [RBP-60],00000833
+74 48C74598AB0A0000                MOV QWORD PTR [RBP-68],00000AAB
+7C 48C74590ADAA8D00                MOV QWORD PTR [RBP-70],008DAAAD
+84 488B45F8                        MOV RAX,QWORD PTR [RBP-08]
+88 480FAF45F0                      IMUL RAX,QWORD PTR [RBP-10]
+8D 48894588                        MOV QWORD PTR [RBP-78],RAX
+91 488B45E8                        MOV RAX,QWORD PTR [RBP-18]
+95 480FAF45E0                      IMUL RAX,QWORD PTR [RBP-20]
+9A 480FAF45D8                      IMUL RAX,QWORD PTR [RBP-28]
+9F 480FAF45D0                      IMUL RAX,QWORD PTR [RBP-30]
+A4 480FAF45C8                      IMUL RAX,QWORD PTR [RBP-38]
+A9 48894580                        MOV QWORD PTR [RBP-80],RAX
+AD 488B45C0                        MOV RAX,QWORD PTR [RBP-40]
+B1 480FAF45B8                      IMUL RAX,QWORD PTR [RBP-48]
+B6 480FAF45B0                      IMUL RAX,QWORD PTR [RBP-50]
+BB 480FAF45A8                      IMUL RAX,QWORD PTR [RBP-58]
+C0 48898578FFFFFF                  MOV QWORD PTR [RBP-00000088],RAX
+C7 488B45A0                        MOV RAX,QWORD PTR [RBP-60]
+CB 480FAF4598                      IMUL RAX,QWORD PTR [RBP-68]
+D0 480FAF4590                      IMUL RAX,QWORD PTR [RBP-70]
+D5 48898570FFFFFF                  MOV QWORD PTR [RBP-00000090],RAX
+DC B800000000                      MOV EAX,00000000
+E1 C9                              LEAVE
+```  
+This program creates a bunch of variables through multiplying large numbers. Retrace the program and figure out what those variables are, and then convert them into ASCII.  
+  
