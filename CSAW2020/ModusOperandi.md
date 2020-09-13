@@ -1,4 +1,4 @@
-`nc crypto.chal.csaw.io 5001`
+`nc crypto.chal.csaw.io 5001`  
 Upon running the command, we get a prompt asking for a plaintext. When we enter anything in, it spews out a string of hex numbers and asks us "ECB or CBC?"  
 This refers to different modes of operation for AES cipher. Each time you connect, it will encrypt your plaintext with a random key and mode of operation.  
 You must guess which mode is used many times in a row.  
