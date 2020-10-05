@@ -2,5 +2,5 @@
 Twitter primarily uses hashtags, so we search #shrive on there first. Results in latest show us ![this](https://raw.githubusercontent.com/Happygator/CTF/master/b01lersCTF/Twitter.png).  
 This V760DHM person looks suspicious, as free malware removal is a common method for trojans to get into a system.  
 Scrolling through their history, we find [this tweet](https://twitter.com/V760DHM/status/1311551737380179968) which links to an imgur post. The account has the same name, and so we investiagte that.  
-There are only [two posts](https://raw.githubusercontent.com/Happygator/CTF/master/b01lersCTF/Imgur.PNG) under this account. Looking at the trollface post, we find the flag in the comments.
+There are only [two posts](https://raw.githubusercontent.com/Happygator/CTF/master/b01lersCTF/Imgur.PNG) under this account. Looking at the trollface post, we find [the flag](https://raw.githubusercontent.com/Happygator/CTF/master/b01lersCTF/Imgur.PNG) in the comments.
 flag: `flag{shu7_up_4nd_d4nc3_G5jM30}`
