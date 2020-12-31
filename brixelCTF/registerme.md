@@ -14,6 +14,6 @@ Once we filter the results, we notice that the program makes many Query Director
 ![kevin](https://github.com/Happygator/CTF/blob/master/brixelCTF/Queries.PNG)  
 It keeps returning `NO SUCH FILE` when queried, so let's make a file called activation.key and put it in the same directory as the program:
 ![kevin](https://github.com/Happygator/CTF/blob/master/brixelCTF/withkey.PNG)  
-Now, when the program is run it believes it's been registered, and hands us a "Show Flag" Button.
-![kevin](https://github.com/Happygator/CTF/blob/master/brixelCTF/registered.PNG)
+Now, when the program is run it believes it's been registered, and hands us a "Show Flag" Button.  
+![kevin](https://github.com/Happygator/CTF/blob/master/brixelCTF/registered.PNG)  
 Flag: `brixelCTF{f1l34cc3ss}`
