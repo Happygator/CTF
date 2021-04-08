@@ -40,4 +40,27 @@ Example: a -> 01100001 -> 0110 0001 -> 6 1 -> g b
 This reveals that the ciphertext only uses 
 Afterwards, shift is called and a typical caesar cipher is performed. This actually uses Viginere cipher's algorithm for a key of length 1, but the end result is the same.  
 To solve this, we can brute force decrypting the ciphertext with all 16 possible keys(a-p), as both of the functions are reversible.
+Here is the code I used to print out all possible decryptions:
+```
+ciphertext = "kjlijdliljhdjdhfkfkhhjkkhhkihlhnhghekfhmhjhkhfhekfkkkjkghghjhlhghmhhhfkikfkfhm"
+ALPHABET = "abcdefghijklmnop"
+def unshift(c, k):
+    t1 = ord(c) - 97
+    return ALPHABET[(t1 - k + 32) % len(ALPHABET)]
 
+def b16_decode(cipher):
+    enc = ""
+    for i in range(0, len(cipher), 2):
+        enc += chr((ord(cipher[i]) - 97) * 16 + (ord(cipher[i+1]) - 97))
+    return enc
+
+for i in range(16):
+    shifted = ""
+    for char in ciphertext:
+        shifted += unshift(char, i)
+    print(b16_decode(shifted))
+
+```
+
+Flag: `et_tu?_1ac5f3d7920a85610afeb2572831daa8`  
+Note: This is the picoGYM flag, not the picoCTF flag.
