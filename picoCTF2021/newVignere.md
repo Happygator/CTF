@@ -1,6 +1,7 @@
 > Another slight twist on a classic, see if you can recover the flag. 
 > (Wrap with picoCTF{}) epdfglkfnbjbhbpicohidjgkhfnejeecmjfnejddgmhpndmchbmifnepdhdmhbah 
-[new_vignere.py](https://mercury.picoctf.net/static/cf0a2b589b6e55cfc5b108b3bdeb2647/new_vignere.py)
+[new_vignere.py](https://mercury.picoctf.net/static/cf0a2b589b6e55cfc5b108b3bdeb2647/new_vignere.py)  
+
 As the description suggests, this problem is New Caesar but Vignere is applied. Here's the contents of the file:
 ```
 import string
@@ -72,7 +73,7 @@ o n a e h d b j m b n a b h d o g p o n a b h g b g p o n n b k
 n m p d g c a i l a m p a g c n f o n m p a g f a f o n m m a j 
 ```
 This does work and allows us to get the key, or 3 possible keys in this case because the third letter is always either a, n, or m.  
-Our three possible keys are bgabajepk, bgnbajepk, and bgmbajepk. Finally, we simply attempt to decrypt the key with all three of the keys.
+Our three possible keys are bgabajepk, bgnbajepk, and bgmbajepk. Finally, we simply attempt to decrypt the key with all three of the keys.  
 `Key bgabajepk -> djdegcggdadbgbgedegcdigbdgdddedcdfgddddcgddadcgcgbdegddjdgdddcgg -> 94bf01ad4b8a63425c32c02ba4c9632f`
 This flag is the correct answer, and so we do not need to try the other two:  
 Flag: `94bf01ad4b8a63425c32c02ba4c9632f>>>`
