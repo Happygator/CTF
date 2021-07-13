@@ -1,6 +1,6 @@
 
 # annaBEL-lee
-**Category:** misc
+**Category:** misc  
 **Description:** 
 sounds from a kingdom by the sea
 
@@ -10,7 +10,7 @@ What exactly is the server sending? Sometimes it makes a sound, sometimes it doe
 
 It might be helpful to turn your sound on, but you'll probably want to write all of it down since your terminal might not catch everything fast enough—maybe slow it down to get a better idea.
 
-This is not audio steganography. Apologies if anyone went down that route.
+This is not audio steganography. Apologies if anyone went down that route.  
 
 The problem gives us `nc mc.ax 31845` and nothing else. Connecting via netcat gives us no tex, tbut with volume turned up you can hear beeps or sounds in a somewhat regular manner.  
 These beeps come from the output, which is actually a series of null bytes and byte 07(bell). Using pwntools to view the output results in:  
