@@ -12,6 +12,7 @@ It might be helpful to turn your sound on, but you'll probably want to write all
 
 This is not audio steganography. Apologies if anyone went down that route.  
 
+# solution
 The problem gives us `nc mc.ax 31845` and nothing else. Connecting via netcat gives us no tex, tbut with volume turned up you can hear beeps or sounds in a somewhat regular manner.  
 These beeps come from the output, which is actually a series of null bytes and byte 07(bell). Using pwntools to view the output results in:  
 ```
