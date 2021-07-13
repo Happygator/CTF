@@ -1,3 +1,18 @@
+```
+# annaBEL-lee
+**Category:** misc
+**Description:** 
+sounds from a kingdom by the sea
+
+The server does not produce any visible output; please take a close look at what it is sending before asking if the server is broken.
+
+What exactly is the server sending? Sometimes it makes a sound, sometimes it doesn't. Plotting it on a chart might help you see something.
+
+It might be helpful to turn your sound on, but you'll probably want to write all of it down since your terminal might not catch everything fast enough—maybe slow it down to get a better idea.
+
+This is not audio steganography. Apologies if anyone went down that route.
+```
+
 The problem gives us `nc mc.ax 31845` and nothing else. Connecting via netcat gives us no tex, tbut with volume turned up you can hear beeps or sounds in a somewhat regular manner.  
 These beeps come from the output, which is actually a series of null bytes and byte 07(bell). Using pwntools to view the output results in:  
 ```
