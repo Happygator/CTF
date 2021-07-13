@@ -4,6 +4,7 @@
 
   **Description:** `nc mc.ax 31996`
 
+  **Attached files:** [chall.py](https://github.com/Happygator/CTF/blob/master/redpwn-2021/chall.py)
 
 The problem gives no description, but connecting with the netcat command gives us a lengthy description.  
 ```
@@ -105,4 +106,51 @@ Target string: ginkoid
 This level is very similar to level 3, but if we try the same solution except with `gg => g` and `g => ginkoid` it won't work.  
 While the priority of rules would cause you to eventually land on ginkoid, the second rule would then infinitely trigger because ginkoid has a g in it.  
 We can sidestep this by adding a new letter(I chose a) and having each a eat other as and gs, and later have one a turn into ginkoid.  
-This solution doesn't work for the test case of a singular g, but 
+This solution doesn't work for the test case of a singular g, but looking at the challenge code reveals that the test cases only consist of 10-100 gs.
+
+Solution: `gg => a, ag => a, aa => a, a => ginkoid`  
+a won't turn into ginkoid immediately because each substitution round only applies one rule, so as long as another rule applies(i.e. there are extra gs and as), the 4th rule won't.  
+
+## Level 5
+
+```
+Here is this level's intended behavior:
+
+Initial string: ^00010010001100010000111010010111111010001010101100110111001$
+Target string: not_palindrome
+
+Initial string: ^11000100001110011111111101100101101100111010000111111111000010$
+Target string: not_palindrome
+
+Initial string: ^11010011010101010101000101000010100010101010101011001011$
+Target string: palindrome
+
+Initial string: ^100010101110001000100111111111110011110011111111111001000100011101010001$
+Target string: palindrome
+```
+This problem is only possible because of two facts.  
+1. There are only two digits, 0 and 1.
+2. We are guaranteed to know where the start and end of the string are, as they are marked with ^ and $.
+Here's what I came up with:
+```
+h$ => palindrome 
+^ => hs  
+0n => n,  1n => n  
+1s1$ => $,  0s0$ => $,  1s0$ => n,  0s1$ => n,  
+s00 => 0s0,  s01 => 1s0,  s10 => 0s1,  s11 => 1s1, 
+hs1$ => palindrome,  hs0$ => palindrome,  
+hn => not_palindrome,  
+h => ^,  
+nn => n 
+```
+Here's what the program does:  
+Supposed the input string is `^010010$`.  
+`^ => hs` will apply, changing the string to `^h s0 10010$`(spaaces added for clarity). H stands for head(of the string), and s is our "cursor" which will carry digits.  
+`s01 => 1s0` will apply, changing the string to `^h1 s0 0010$`. This effectively moves s0 one place to the right.  
+`s00 => 0s0` will apply, changing the string to `^h10 s0 010$`. This process will continue until there are no digits to the right of s0, resulting in `^h10010s0$`.  
+`0s0$ => $` will apply, erasing s and the two zeroes because they are the same. THis leaves us with `h1001$`.  
+`h => ^` will apply, leaving us with the initial string but with the first and last digits erased.  
+This process will continue until either the first and last digits are different(at which an n will be inserted and erase everything) or there are 0 or 1 digits left.  
+
+## Level 6
+
