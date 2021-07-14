@@ -140,8 +140,7 @@ h$ => palindrome
 s00 => 0s0,  s01 => 1s0,  s10 => 0s1,  s11 => 1s1, 
 hs1$ => palindrome,  hs0$ => palindrome,  
 hn => not_palindrome,  
-h => ^,  
-nn => n 
+h => ^ 
 ```
 Here's what the program does:  
 Supposed the input string is `^010010$`.  
