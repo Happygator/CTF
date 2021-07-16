@@ -147,7 +147,7 @@ Supposed the input string is `^010010$`.
 `^ => hs` will apply, changing the string to `^h s0 10010$`(spaaces added for clarity). H stands for head(of the string), and s is our "cursor" which will carry digits.  
 `s01 => 1s0` will apply, changing the string to `^h1 s0 0010$`. This effectively moves s0 one place to the right.  
 `s00 => 0s0` will apply, changing the string to `^h10 s0 010$`. This process will continue until there are no digits to the right of s0, resulting in `^h10010s0$`.  
-`0s0$ => $` will apply, erasing s and the two zeroes because they are the same. THis leaves us with `h1001$`.  
+`0s0$ => $` will apply, erasing s and the two zeroes because they are the same. This leaves us with `h1001$`.  
 `h => ^` will apply, leaving us with the initial string but with the first and last digits erased.  
 This process will continue until either the first and last digits are different(at which an n will be inserted and erase everything) or there are 0 or 1 digits left.  
 If the first and last digits are ever different, an n will replace the $ at the end of the string. This n will eat all other 0s and 1s and leave us with hn, which will turn into `not palindrome`.  
