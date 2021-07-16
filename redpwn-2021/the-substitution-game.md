@@ -220,7 +220,7 @@ This program uses the same idea of a letter cursor. It's process can be turned i
 6. Move t and its digit to the end of the string, right before $.  
 7. If the two digits surrounding t are the same, delete both digits and t.  
   a. Otherwise, put an n there. n eats everything else in the equation except ^.
-8. If the equation is just ^n, replace it with `incorrect.`
+8. If the equation is just ^n, replace it with `incorrect.`  
   a. If the equation contains no numbers and no carries but a 1 in the result, replace it with an n(which will later be replaced with incorrect).  
   b. If no digits are left in any number, replace the entire equation with `correct`.  
   c. If none of these conditions apply, goto 2.  
